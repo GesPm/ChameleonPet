@@ -3,6 +3,34 @@
 [ext_resource type="Script" uid="uid://c6rl1c43wfv0i" path="res://petthing.gd" id="1_5hl4d"]
 [ext_resource type="Texture2D" uid="uid://cc28s05krloco" path="res://Astronaut-Sheet.png" id="2_43d2y"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyl02"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugbgq"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odc32"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4cgb"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftmaf"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3u5k"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iph8"]
+atlas = ExtResource("2_43d2y")
+region = Rect2(96, 48, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_fji5t"]
 atlas = ExtResource("2_43d2y")
 region = Rect2(0, 0, 16, 16)
@@ -79,6 +107,32 @@ region = Rect2(208, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yyl02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugbgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odc32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4cgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftmaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3u5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iph8")
+}],
+"loop": 1,
+"name": &"flail",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fji5t")
 }, {
 "duration": 1.0,
@@ -92,11 +146,6 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"new_animation",
 "speed": 5.0
 }, {
 "frames": [{
@@ -148,7 +197,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3635s"]
-size = Vector2(16.909096, 15.816092)
+size = Vector2(10.545457, 11.586207)
 
 [node name="Node2D" type="Node2D" unique_id=1168444308]
 script = ExtResource("1_5hl4d")
@@ -158,12 +207,13 @@ position = Vector2(33.000004, 26)
 scale = Vector2(4.9375, 4.71875)
 sprite_frames = SubResource("SpriteFrames_shpl7")
 animation = &"walk"
+frame_progress = 0.96045244
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1294650748]
 position = Vector2(34, 20)
 scale = Vector2(5.4999995, 5.4375)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=525131624]
-position = Vector2(0, 0.18390846)
+position = Vector2(-0.9090905, 2.2988508)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_3635s")
